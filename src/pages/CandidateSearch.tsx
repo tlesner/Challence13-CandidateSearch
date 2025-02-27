@@ -83,9 +83,9 @@ const CandidateSearch = () => {
 			{currentUser ? (
 				<div>
 					<CandidateCard username={currentUser.login} />
-					<button onClick={handleNextUser}>Next</button>
+					<button onClick={handleNextUser}>Reject User</button>
 
-          <button onClick={handleSelectUser}>Select User</button>
+          <button onClick={handleSelectUser}>Accept User</button>
 				</div>
 			) : null}
 		</div>
