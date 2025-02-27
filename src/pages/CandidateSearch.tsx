@@ -43,7 +43,6 @@ const CandidateSearch = () => {
 			return undefined;
 		}
 		if (currentIndex > users.length) {
-			//TODO: fix this later to have a message pop-up or something display on screen...
 			console.log('No candidates are available to review, starting over.');
 			return 0;
 		}

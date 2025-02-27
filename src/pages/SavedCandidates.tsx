@@ -16,7 +16,7 @@ const SavedCandidates = ({ usernames }: Props) => {
       for (let ii = 0; ii < usernames.length; ii++) {
         const username = usernames[ii];
         const user = await searchGithubUser(username);
-        
+
         if (user) {
           loadedUsers.push(user);
         }
@@ -49,6 +49,34 @@ const SavedCandidates = ({ usernames }: Props) => {
   return (
     <div>
       <h1>Potential Candidates</h1>
+      <table className="table">
+        <tbody className="tbody">
+          <tr className="tr">
+            <th>Image</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Email</th>
+            <th>Company</th>
+            <th>Bio</th>
+            <th>Remove</th>
+          </tr>
+          {users.map((user, index) =>
+            <tr>
+              <td>
+                <img
+                  src={user.avatar_url}
+                >
+                </img>
+              </td>
+              <td>{user.name}</td>
+              <td>{user.location}</td>
+              <td>{user.email}</td>
+              <td>{user.bio}</td>
+              {/* <td>{user.}</td> */}
+            </tr>
+          )}
+        </tbody>
+      </table>
     </div>
   );
 };
